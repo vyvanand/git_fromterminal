@@ -1,0 +1,14 @@
+window.onload = function() { 
+	var video = document.getElementById('video');
+	var source = document.createElement('source');
+	source.setAttribute('src', 'http://www.quirksmode.org/html5/videos/big_buck_bunny.mp4');
+	video.appendChild(source);
+	video.play();
+
+	setTimeout(function() {  
+	    video.pause();
+	    source.setAttribute('src', 'http://www.quirksmode.org/html5/videos/big_buck_bunny.mp4'); 
+	    video.load();
+	    video.play();
+	}, 60000);
+	};
